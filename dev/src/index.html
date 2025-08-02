@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVIK – One Page Creative Personal Portfolio HTML Template</title>
+    <meta property="og:description" content="OVIK is a clean and modern personal portfolio template perfect for freelancers and creatives. Built with HTML5, CSS3, and JavaScript, it is fully responsive and SEO-friendly. OVIK offers easy customization, well-organized code, and works smoothly across all devices to showcase your work professionally.">
+    <meta name="keywords" content="portfolio, personal portfolio, freelancer">
+    <meta name="author" content="Ovik Biswas">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/odometer-theme-default.min.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/output.css">
+  </head>
+  <body class="overflow-x-hidden dark:bg-black/97 selection:bg-primary/50 transition-all">
+
+
+    <!-- pop up modal when click to "Get CV" button -->
+    <div class="fixed z-10 top-0 left-0 w-full h-full dark:bg-black/80 bg-white/80 hidden" id="cv-modal">
+      <div class="backdrop-blur-2xl lg:w-1000 w-4/5 p-20 rounded-2xl border-2 md:border-3 border-black/15 dark:border-white/15 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="flex justify-between">
+          <h3 class="text-black dark:text-white lg:text-5xl text-3xl font-bold">Get my CV</h3>
+          <button class="h-40 lg:h-60 hover:rotate-90 hover:scale-90 transition-all aspect-square dark:bg-white/15 bg-black/15 rounded-full flex items-center justify-center cursor-pointer" id="closecv">
+            <svg class="scale-100 lg:scale-150 dark:fill-white fill-black" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </button>
+        </div>
+        <p class="my-20 text-black dark:text-white text-sm lg:text-base">My CV is available for download in PDF format or you can view the online version to get a quick overview of my professional journey. It includes details about my technical skills, work experience, education, and selected projects that reflect my capabilities.</p>
+        <div class="flex justify-center flex-col lg:flex-row gap-10">
+          <a href="./assets/files/cv.pdf" download class="bg-primary lg:px-30 flex rounded-full py-15 justify-center font-bold text-white">Download<svg class="fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg></a>
+          <a href="./assets/files/cv.pdf" target="_blank" class="border-3 lg:px-30 border-primary text-black dark:text-white flex rounded-full py-15 justify-center font-bold">View Live<svg class="fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- go top button -->
+    <a id="goTop" href="#home" class="singlePageLink fixed z-9 opacity-0 translate-y-10 cursor-pointer hover:scale-90 transition-all flex items-end bg-white/50 dark:bg-black/50 h-60 aspect-square bottom-40 right-40 rounded-full overflow-hidden gotop">
+      <span id="scrollProgress" class="bg-primary w-full h-[10%]"></span>
+      <svg class="absolute top-1/2 transition-all left-1/2 transform -translate-x-1/2 -translate-y-1/2 fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M440-80v-647L256-544l-56-56 280-280 280 280-56 57-184-184v647h-80Z"/></svg>
+    </a>
+
+
+    <!-- background Cursor -->
+    <div class="bgCursor h-400 aspect-square -z-1 blur-[100px] rounded-[30%] top-0 left-0 fixed pointer-events-none dark:bg-primary/20 bg-primary/40"></div>
+
+
+    <!-- cursor follower -->
+    <div id="cursor" class="fixed lg:flex text-center font-bold text-2xl justify-center items-center z-11 h-40 aspect-square rounded-full border-2 text-white border-primary pointer-events-none transform -translate-x-1/2 -translate-y-1/2 origin-center hidden"></div>
+
+
+    <!-- navigation for 1024px width less devices -->
+    <div id="menuContainer" class="fixed transition-all h-dvh top-0 w-full bg-black/30 backdrop-blur-xl z-10 pointer-events-none lg:hidden opacity-0"></div>
+    <div id="menu" class="bg-lightbox/95 transition-all dark:bg-darkbox/95 px-20 py-40 text-black dark:text-white z-11 fixed h-full w-2/3 -right-2/3 lg:hidden top-0">
+      <div class="flex justify-between">
+        <button class="theme-toggle h-50 md:h-70 hover:scale-90 aspect-square cursor-pointer flex items-center justify-center bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-full"></button>
+        <button id="menuCloseBtn" class="h-50 md:h-70 hover:scale-90 aspect-square cursor-pointer flex items-center justify-center bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-full"><svg class="scale-150 md:scale-200 fill-black dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+      </div>
+      <ul class="flex flex-col gap-15 md:gap-40 mt-40 nav-with-after-presudo">
+        <li><a href="#home" class="singlePageLink active text-3xl md:text-7xl dark:text-white transition-colors text-black font-bold font-myfont p-5 hover:bg-white/15 rounded-lg nav-link-mobile">Home</a></li>
+        <li><a href="#portfolio" class="singlePageLink text-3xl md:text-7xl dark:text-white transition-colors text-black font-bold font-myfont p-5 hover:bg-white/15 rounded-lg nav-link-mobile">Portfolio</a></li>
+        <li><a href="#contact" class="singlePageLink text-3xl md:text-7xl dark:text-white transition-colors text-black font-bold font-myfont p-5 hover:bg-white/15 rounded-lg nav-link-mobile">Contact</a></li>
+        <li><a href="#testimonial" class="singlePageLink text-3xl md:text-7xl dark:text-white transition-colors text-black font-bold font-myfont p-5 hover:bg-white/15 rounded-lg nav-link-mobile">Testimonial</a></li>
+        <li><a href="#plan" class="singlePageLink text-3xl md:text-7xl dark:text-white transition-colors text-black font-bold font-myfont p-5 hover:bg-white/15 rounded-lg nav-link-mobile">Plan</a></li>
+      </ul>
+    </div>
+
+
+    <!-- hero section start -->
+    <header id="home">
+      <!-- navigation start -->
+      <nav class="w-full lg:h-80 md:h-90 h-70 flex items-center justify-between lg:px-60 px-30 z-9">
+        <a href="./" class="">
+          <img src="./assets/images/logo-light.png" alt="logo" class="lg:h-40 h-30 dark:hidden hover:sepia transition-all cursor-pointer logo">
+          <img src="./assets/images/logo-dark.png" alt="logo" class="lg:h-40 h-30 hidden dark:block hover:sepia transition-all cursor-pointer logo">
+        </a>
+        <ul class="lg:flex gap-40 hidden nav-with-after-presudo">
+          <li><a href="#home" class="singlePageLink active text-xl dark:text-white text-black font-bold font-myfont nav-link transition-all">Home</a></li>
+          <li><a href="#portfolio" class="singlePageLink text-xl dark:text-white text-black font-bold font-myfont nav-link transition-all">Portfolio</a></li>
+          <li><a href="#contact" class="singlePageLink text-xl dark:text-white text-black font-bold font-myfont nav-link transition-all">Contact</a></li>
+          <li><a href="#testimonial" class="singlePageLink text-xl dark:text-white text-black font-bold font-myfont nav-link transition-all">Testimonial</a></li>
+          <li><a href="#plan" class="singlePageLink text-xl dark:text-white text-black font-bold font-myfont nav-link transition-all">Plan</a></li>
+        </ul>
+        <button id="menuOpenBtn" class="h-40 md:h-60 hover:scale-90 aspect-square group p-5 flex flex-col gap-7 justify-center cursor-pointer bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-xl lg:hidden">
+          <span class="h-3 md:h-4 group-hover:w-2/3 transition-all w-full bg-black dark:bg-white rounded-[1px]"></span>
+          <span class="h-3 md:h-4 group-hover:w-full transition-all w-2/3 bg-black dark:bg-white rounded-[1px]"></span>
+        </button>
+        <button class="theme-toggle h-60 hover:scale-90 aspect-square cursor-pointer lg:flex items-center justify-center bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-full hidden"></button>
+      </nav>
+      <div class="lg:grid lg:grid-cols-[40%_60%] max-w-[1400px] mx-auto mt-20">
+
+        <!-- hero section left side content start -->
+        <div class="flex items-center justify-center">
+          <img src="./assets/images/hero.png" alt="main image" class="w-9/10 aspect-3/4 rounded-2xl object-cover" data-tilt data-tilt-glare>
+        </div>
+
+        <!-- hero section right side content start -->
+        <div class="flex flex-col justify-center px-20">
+          <h1 class="lg:text-7xl md:text-8xl text-5xl mt-20 lg:mt-0 dark:text-white text-black font-bold font-myfont transition-all">Hello, I am <span class="bg-linear-to-r/shorter from-primary from-50% to-primary bg-clip-text font-extrabold text-transparent">Avik</span></h1>
+          <h2 class="lg:text-5xl md:text-6xl text-3xl w-max font-bold dark:text-white text-black font-myfont mt-20 lg:mt-10 transition-all">I'am a <span class="text-primary"></span></h2>
+          <p class="text-sm md:text-2xl lg:text-xl dark:text-white/80 text-black/80 my-15 transition-all details">A passionate web developer with a knack for creating stunning and functional websites. I love to explore new technologies and push the boundaries of web development.</p>
+          <div class="flex gap-10 buttonContainer">
+            <a href="#contact" class="btn-primary font-myfont"><span></span><span class="font-myfont font-bold">Let's Contact</span><span></span></a>
+            <button class="btn-secondary font-myfont" id="opencv"><span></span><span class="font-myfont font-bold">Get CV</span><span></span></button>
+          </div>
+          <p class="text-sm font-myfont font-bold md:text-xl lg:text-lg mt-15 dark:text-white transition-all socialLabel">Follow me on:</p>
+          <div class="social-media-container flex items-center gap-10 lg:gap-15 md:mt-10 lg:mt-0">
+            <!-- Social media icons will render here dynamically from a JavaScript array -->
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <!-- header section end -->
+
+
+    <!-- milestones section start -->
+    <section id="skill" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-fr gap-10 md:gap-20 pt-100 max-w-[1400px] px-20 lg:px-40 mx-auto text-white stats-section">
+      <h2 class="hidden">Milestone</h2>
+      <!-- Static large static card -->
+      <article class="transition-all flex flex-col w-full col-span-2 row-span-2 grid-rows-2 lg:rounded-2xl rounded-lg lg:p-40 p-20 bg-lightbox text-black dark:text-white dark:bg-darkbox">
+        <div class="flex gap-15 items-center">
+          <h2 class="md:text-[140px] text-9xl font-bold m-0 leading-none tracking-widest odometer text-primary" id="static-big-card">0</h2>
+          <p class="lg:text-6xl md:text-5xl text-3xl font-extrabold font-myfont">Years Of Experience</p>
+        </div>
+        <p class="text-sm lg:text-lg lg:mt-30 mt-15 transition-all">Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency</p>
+      </article>
+      <!-- Small card will render here dynamically from a JavaScript array -->
+    </section>
+    <!-- milestones section end -->
+
+
+    <!-- skill section start -->
+    <section class="pt-100 text-black dark:text-white max-w-[1400px] mx-auto px-20 lg:px-40">
+      <h2 class="text-center lg:font-bold lg:text-7xl text-5xl font-myfont transition-all">What I’m Good At?</h2>
+      <div class="grid md:grid-cols-2 gap-30 lg:gap-50 my-30 skill-container transition-all">
+        <!-- Skill progress will render here dynamically from a JavaScript array -->
+      </div>
+    </section>
+    <!-- skill section end -->
+
+
+    <!-- education and exprience section start -->
+    <section class="pt-100 text-black font-myfont dark:text-white max-w-[1400px] mx-auto grid md:grid-cols-[1fr_2px_1fr] lg:grid-cols-[1fr_3px_1fr] gap-40 md:gap-10 lg:gap-40 px-20 lg:px-40">
+      <div class="flex flex-col gap-10 lg:gap-20 transition-all" id="education-container">
+        <h2 class="lg:font-bold text-5xl lg:text-7xl text-center lg:text-left transition-all">Education</h2>
+        <!-- Education card will render here dynamically from a JavaScript array -->
+      </div>
+      <div class="dark:bg-white/15 bg-black/15 transition-all rounded-full hidden md:block"></div>
+      <div class="flex flex-col gap-10 lg:gap-20 transition-all" id="exprience-container">
+        <h2 class="lg:font-bold text-5xl lg:text-7xl text-center lg:text-left transition-all">Exprience</h2>
+        <!-- Exprience card will render here dynamically from a JavaScript array -->
+      </div>
+    </section>
+    <!-- education and exprience section end -->
+
+
+    <!-- portfolio section start -->
+    <section id="portfolio" class="pt-100 text-black dark:text-white max-w-[1400px] mx-auto px-20 lg:px-40">
+      <h2 class="text-center lg:font-bold lg:text-7xl text-5xl font-myfont transition-all">My Creations</h2>
+      <div class="md:grid md:grid-cols-2 gap-20 transition-all" id="portfolio-container">
+        <!-- Portfolio card will render here dynamically from a JavaScript array -->
+      </div>
+    </section>
+    <!-- portfolio section end -->
+
+
+    <!-- contact section start -->
+    <section class="pt-100 text-black dark:text-white max-w-[1400px] mx-auto px-20 lg:px-40" id="contact">
+      <h2 class="text-center lg:font-bold lg:text-7xl text-5xl font-myfont transition-all">Get in Touch</h2>
+      <div class="grid lg:grid-cols-[2fr_1fr] gap-20 lg:gap-40">
+        <form action="https://formsubmit.co/your@email.com" method="POST" class="dark:bg-darkbox transition-all bg-lightbox lg:p-40 p-20 rounded-lg lg:rounded-2xl md:grid flex flex-col md:grid-cols-2 gap-20">
+          <!-- Email send config -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Your message submited successfully.">
+          <input type="hidden" name="_subject" value="Someone send a message from your portfolio website">
+
+          <input type="text" placeholder="Your name" name="name" required class="lg:outline-3 outline-2 outline-black/15 dark:outline-white/15 md:p-20 p-10 dark:text-white rounded-lg lg:rounded-2xl focus:outline-primary transition-all">
+          <input type="email" placeholder="Your email" name="email" required class=" lg:outline-3 outline-2 outline-black/15 dark:outline-white/15 md:p-20 p-10 dark:text-white rounded-lg lg:rounded-2xl focus:outline-primary transition-all">
+          <input type="text" placeholder="Your subject" name="subject" required class="col-span-2 lg:outline-3 outline-2 outline-black/15 dark:outline-white/15 md:p-20 p-10 dark:text-white rounded-lg lg:rounded-2xl focus:outline-primary transition-all">
+          <textarea placeholder="Your message" name="message" required rows="4" class=" lg:outline-3 outline-2 outline-black/15 dark:outline-white/15 md:p-20 p-10 dark:text-white rounded-lg lg:rounded-2xl col-span-2 h-auto focus:outline-primary transition-all"></textarea>
+          <div class="col-span-2 flex justify-end">
+            <button type="submit" class="btn-primary text-black font-myfont"><span></span><span>Let's Contact</span><span></span></button>
+          </div>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2955.097803019077!2d89.8351224416059!3d23.603694549300005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1752849927608!5m2!1sen!2sbd" class="lg:h-full transition-all md:aspect-video aspect-square w-full rounded-lg lg:rounded-2xl border-2 lg:border-3 border-black/15 dark:border-white/15" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+    <!-- contact section end -->
+
+
+    <!-- clients review section start -->
+    <section id="testimonial" class="pt-100 text-black dark:text-white max-w-[1400px] overflow-hidden mx-auto md:grid grid-cols-2 px-20 lg:px-40">
+      <div class="font-myfont">
+        <h2 class="font-bold lg:text-8xl md:text-6xl font-myfont hidden md:block transition-all">What our<br>Clients<br>Says?</h2>
+        <h2 class="text-center text-5xl font-myfont md:hidden mb-10">What our Clients Says?</h2>
+      </div>
+      <div class="mySwiper w-full px-20 lg:px-0">
+        <div class="swiper-wrapper">
+          <!-- Clients review card will render here dynamically from a JavaScript array -->
+        </div>
+      </div>
+    </section>
+    <!-- clients review section end -->
+
+
+    <!-- plan section start -->
+    <section id="plan" class="pt-100 text-black font-myfont dark:text-white max-w-[1400px] mx-auto px-20 lg:px-40">
+      <h2 class="text-center lg:font-bold lg:text-7xl text-5xl font-myfont text-black dark:text-white transition-all">My Pricing Plan</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-30 items-center mt-20" id="plans-container">
+        <!-- Plan card will render here dynamically from a JavaScript array -->
+      </div>
+    </section>
+    <!-- plan section end -->
+
+
+    <!-- faq section start -->
+    <section id="faq" class="pt-100 text-black font-myfont dark:text-white max-w-[1400px] mx-auto grid gap-20 lg:grid-cols-[3fr_2fr] px-20 lg:px-40">
+      <div class="flex flex-col lg:gap-10 gap-10 order-2 lg:order-1" id="faq-container">
+        <!-- FAQ card will render here dynamically from a JavaScript array -->
+      </div>
+        <h2 class="hidden lg:block text-8xl lg:font-extrabold order-1 transition-all text-black dark:text-white">Most<br>asked<br>questions</h2>
+        <h2 class="text-center text-5xl font-myfont lg:hidden">Most asked questions</h2>
+    </section>
+    <!-- faq section end -->
+
+
+    <!-- footer section start -->
+    <footer class="mt-100 text-black font-myfont dark:text-white bg-lightbox dark:bg-darkbox transition-all">
+      <div class="max-w-[1400px] mx-auto py-40 px-20 lg:px-40">
+        <div class="flex gap-20 lg:gap-0 justify-center flex-col lg:flex-row lg:justify-between items-center">
+          <img src="./assets/images/logo-light.png" alt="logo" class="lg:h-40 md:h-30 h-20 dark:hidden hover:sepia transition-all cursor-pointer logo">
+          <img src="./assets/images/logo-dark.png" alt="logo" class="lg:h-40 md:h-30 h-20 hidden dark:block hover:sepia transition-all cursor-pointer logo">
+          <div class="social-media-container-in-footer flex items-center gap-10 lg:gap-15">
+            <!-- Social media icons will render here dynamically from a JavaScript array -->
+          </div>
+        </div>
+        <div class="lg:h-3 h-2 bg-white/15 w-full rounded-full my-20"></div>
+        <div class="grid lg:grid-cols-2">
+          <div class="">
+            <h2 class="font-extrabold text-3xl lg:text-5xl text-center lg:text-left">Contact</h2>
+            <ul class="lg:mt-20 mt-5 flex flex-col gap-20">
+              <li class="flex items-center gap-5 text-base md:text-xl"><div class="lg:h-50 h-40 aspect-square cursor-pointer flex items-center justify-center bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="scale-80 dark:fill-white fill-black" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M680-600h80v-80h-80v80Zm0 160h80v-80h-80v80Zm0 160h80v-80h-80v80Zm0 160v-80h160v-560H480v56l-80-58v-78h520v720H680Zm-640 0v-400l280-200 280 200v400H360v-200h-80v200H40Zm80-80h80v-200h240v200h80v-280L320-622 120-480v280Zm560-360ZM440-200v-200H200v200-200h240v200Z"/></svg></div><p>1234 Lake View Road,<br>Gulshan-2, Dhaka 1212, Bangladesh</p></li>
+              <li class="flex items-center gap-5 text-base md:text-xl"><div class="lg:h-50 h-40 aspect-square cursor-pointer flex items-center justify-center bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="scale-80 dark:fill-white fill-black" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></div><p>+01458954238</p></li>
+              <li class="flex items-center gap-5 text-base md:text-xl"><div class="lg:h-50 h-40 aspect-square cursor-pointer flex items-center justify-center bg-black/5 hover:bg-black/15 dark:bg-white/5 dark:hover:bg-white/15 transition-all rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="scale-80 dark:fill-white fill-black" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M280-280q-33 0-56.5-23.5T200-360v-400q0-33 23.5-56.5T280-840h560q33 0 56.5 23.5T920-760v400q0 33-23.5 56.5T840-280H280Zm280-188L280-663v303h560v-303L560-468Zm0-98 280-194H280l280 194ZM120-120q-33 0-56.5-23.5T40-200v-500h80v500h660v80H120Zm720-546v-94H280v94-94h560v94Z"/></svg></div><p>support@yourdomain.com</p></li>
+            </ul>
+          </div>
+          <div class="">
+            <h2 class="font-extrabold text-3xl lg:text-5xl text-center lg:text-left mt-20 lg:mt-0">Site map</h2>
+            <ul class="flex gap-x-20 underline text-sm lg:mt-20 mt-5 md:text-xl md:gap-x-30 lg:flex-col md:gap-y-10 footer-nav">
+              <li class=""><a href="#home" class="singlePageLink hover:after:w-0">Home</a></li>
+              <li class=""><a href="#portfolio" class="singlePageLink hover:after:w-0">Portfolio</a></li>
+              <li class=""><a href="#contact" class="singlePageLink hover:after:w-0">Contact</a></li>
+              <li class=""><a href="#testimonial" class="singlePageLink hover:after:w-0">Testimonial</a></li>
+              <li class=""><a href="#plan" class="singlePageLink hover:after:w-0">Plan</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-40">
+          <p class="text-center text-sm lg:text-base">&copy; <span id="year"></span> OVIK. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end -->
+
+
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/odometer.min.js"></script>
+    <script src="./assets/js/typed.umd.js"></script>
+    <script src="./assets/js/vanilla-tilt.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

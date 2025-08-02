@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thanks - Form Submited</title>
+        <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/custom.css">
+        <link rel="stylesheet" href="./assets/css/output.css">
+    </head>
+    <body class="dark:bg-black/97 text-black dark:text-white bg-white m-40 selection:bg-primary/50">
+        <h1 class="text-6xl text-center font-bold">Thank you!</h1>
+        <p class="text-xl text-center my-10">Your message has been successfully sent. We will get back to you as soon as possible.</p>
+        <a href="./" class="btn-primary text-black w-max mx-auto"><span></span><span>Return Home</span><span></span></a>
+        <script>
+            const currentTheme = localStorage.getItem('theme');
+            const setDarkMode = (on) => {
+                document.documentElement.classList.toggle('dark', on);
+            };
+
+            if (currentTheme) {
+                setDarkMode(currentTheme === 'dark');
+            } else {
+                const isSystemDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setDarkMode(isSystemDark());
+            }
+        </script>
+    </body>
+</html>

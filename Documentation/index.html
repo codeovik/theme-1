@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs - OVIK - One Page Creative Personal Portfolio HTML Template</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Top nav -->
+    <nav>
+        <img src="./assets/logo-light.png" alt="">
+        <div>
+            <a href="#support" style="padding: 15px; color: #000; background-color: var(--primary); border-radius: 60px; text-decoration: none; color: #fff;">Suppout</a>
+            <a target="_blank" href="https://themeforest.net/user/codeovik/portfolio" style="padding: 15px; color: #000; background-color: var(--primary); border-radius: 60px; text-decoration: none; color: #fff;">More theme</a>
+            <a target="_blank" href="" style="padding: 15px; color: #000; background-color: var(--primary); border-radius: 60px; text-decoration: none; color: #fff;">Rate this theme</a>
+        </div>
+        <svg id="menuBtn" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </nav>
+
+    <!-- Leftside Nav -->
+    <div id="sidebar">
+        <ul>
+            <li><a href="#introducing">Introducing</a></li>
+            <li><a href="#color">Change color</a></li>
+            <li><a href="#font">Change Font</a></li>
+            <li><a href="#favicon">Favicon</a></li>
+            <li><a href="#title">Title</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#tags">Tags</a></li>
+            <li><a href="#author">Author</a></li>
+            <li><a href="#logo">Logo</a></li>
+            <li><a href="#hero-image">hero image</a></li>
+            <li><a href="#name">Name</a></li>
+            <li><a href="#typewriter-effect">Typewriter effect</a></li>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#social">Social</a></li>
+            <li><a href="#milestone">Milestone</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#exprience">Experience</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#client">Clients review</a></li>
+            <li><a href="#plan">Plan</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#footer">Footer</a></li>
+            <li><a href="#credit">Credits</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <section id="introducing">
+            <h1>Introducing</h1>
+            <h2>Theme Details</h2>
+            <ol>
+                <li>Name: OVIK - A Personal Portfolio Template</li>
+                <li>Created: 11 - 23 July, 2025</li>
+                <li>Item Version : v 1.0</li>
+                <li>Author: CodeOVIK</li>
+            </ol>
+            <br>
+            <img src="./assets/preview.png" alt="">
+            <h2>Key Features</h2>
+            <ol>
+                <li>HTML 5</li>
+                <li>CSS 3</li>
+                <li>Tailwind css 4.1</li>
+                <li>Google fonts</li>
+                <li>Fontawsome</li>
+                <li>Gsap</li>
+                <li>Responsive Desing</li>
+                <li>Odometer animation</li>
+                <li>Typewriter effect</li>
+                <li>Slider Effect</li>
+                <li>3D image hover</li>
+            </ol>
+            <h2>File Structure</h2>
+            <pre><code>Theme                                            <== Root folder of portfolio site
+├── assets                                       <== All assets likes images, fonts, icons and other codes here
+│   ├── css                                      <== All stylesheets here
+│   │   ├── all.min.css                          <== Fontawsme icons
+│   │   ├── custom.css                           <== Stylesheet consrol like: brand color and fonts
+│   │   ├── odometer-theme-default.min.css       <== Number count with odometer animation
+│   │   ├── output.css                           <== main stylesheet
+│   │   └── swiper-bundle.min.css                <== Clients review's card slider
+│   ├── files                                    <== All files for this template
+│   │   └── cv.pdf                               <== CV file
+│   ├── fonts                                    <== All fonts here
+│   │   └── MontserratAlternates-Regular.ttf     <== Default font
+│   ├── images                                   <== All images for this template
+│   │   ├── client-1.png                         <== Client image
+│   │   ├── favicon.png                          <== Favicon image
+│   │   ├── food-delivery-app.png                <== Portfolio: food delivery app development screenshort
+│   │   ├── hero.png                             <== Hero section image
+│   │   ├── logo-dark.png                        <== Dark for dark mode
+│   │   └── logo-light.png                       <== Light for light mode
+│   ├── js                                       <== All JavaScript files here
+│   │   ├── gsap.min.js                          <== GSAP for animations
+│   │   ├── odometer.min.js                      <== Odometer for number count animation
+│   │   ├── script.js                            <== Main JavaScript file
+│   │   ├── ScrollTrigger.min.js                 <== GSAP ScrollTrigger for scroll animations
+│   │   ├── swiper-bundle.min.js                 <== Swiper for client review's card slider
+│   │   ├── typed.umd.js                         <== Typing effect
+│   │   └── vanilla-tilt.min.js                  <== Vanilla tilt for tilt effect
+│   └── webfonts                                 <== Fontawsome webfonts
+│       ├── fa-brands-400.ttf                    <== Fontawsome brand icons for modern browsers
+│       └── fa-brands-400.woff2                  <== Fontawsome brand icons for older browsers
+├── index.html                                   <== Main HTML file
+└── thanks.html                                  <== Thanks page when click on contact form submit button</code></pre>
+            <h2>How to open file and edit:</h2>
+            <p>This time you will learn how to open file, edit and save. Example: you open index.html file. Then edit title of this template and save and live preview in browser.</p>
+            <ol>
+                <li>Right click to Theme/index.html file. Then you can see like this image:</li>
+                <img src="./assets/right-click.png" alt="">
+                <li>Click to "Open with" button. like this image</li>
+                <img src="./assets/open-with.png" alt="">
+                <li>Click to "Choose another app" like this image</li>
+                <img src="./assets/choose-app.png" alt="">
+                <li>Choose "Notepad" and click "ok" like this image</li>
+                <li>Notapad apps opened like this image. You can edit code here. In next, you will change code.</li>
+                <img src="./assets/notepad-preview.png" alt="">
+                <li>Now find out how to save your file. Click to "File" in menu bar. Then click "save".</li>
+                <img src="./assets/howToSaveFile.png" alt="">
+                <li>How to preview site? Double click to Theme/index.html file. It will open your portfolio sites's homepage on browser like chrome, Microsoft edge, Firebox, Uc browser etc.</li>
+                <li>Example: i double clicked to Theme/index.html file and homepage opened in chrome like this image</li>
+                <img src="./assets/ThemePreviewOnBrowser.png" alt="">
+            </ol>
+        </section>
+
+
+
+        <section id="color">
+            <h1>Change color</h1>
+            <p>You can see this highlighted is purple color. It is brand color of this theme. You can set your own color here.</p>
+            <img src="./assets/color.png" alt="">
+            <ol>
+                <li>Open theme/assets/css/custom.css with Notepad. you can see like this image</li>
+                <img src="./assets/colorc.png" alt="">
+                <li>Change this into your own color.</li>
+                <p class="d">Make sure to use hexadecimal color format like #f00. Not use like rgb, hsl format.</p>
+                <li>Save file and reload the browser. You can see result.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="font">
+            <h1>Change font of theme.</h1>
+            <h2>Lets remove the default font</h2>
+            <ol>
+                <li>remove theme/assets/fonts/main.ttf file</li>
+                <li>Reload the browser, you can see that this portfolio website's font has changed.</li>
+            </ol>
+            <h2>Let's choose and get your fonts</h2>
+            <ol>
+                <li>Open <a target="_blank" href="https://fonts.google.com/">Google fonts</a> You can see like this image</li>
+                <img src="./assets/gf.png" alt="">
+                <li>Choose any font here as you like and click to "get font". for example, I choose "Playwrite Australia NSW" font.</li>
+                <img src="./assets/gf2.png" alt="">
+                <li>Click to "get embed code" button</li>
+                <img src="./assets/gf3.png" alt="">
+                <li>Copy this highlighted text.</li>
+                <img src="./assets/gf4.png" alt="">
+                <li>Open theme/assets/css/custom.css with Notepad. Replace this selected text to your copied text.</li>
+                <img src="./assets/gf5.png" alt="">
+                <li>Save the file.</li>
+                <li>Again, copy this selected text:</li>
+                <img src="./assets/gf6.png" alt="">
+                <li>Open theme/assets/css/custom.css with Notepad. Replace this selected text to your copied text.</li>
+                <img src="./assets/gf7.png" alt="">
+                <li>Save the file.</li>
+                <li>Back to google fonts embed code like this image</li>
+                <img src="./assets/gf8.png" alt="">
+                <li>Click to "Download all"</li>
+                <img src="./assets/gf9.png" alt="">
+                <li>Go file manager. You can see like this zip file has downloaded.</li>
+                <img src="./assets/gf10.png" alt="">
+                <li>Unzip this file by "right click to mouse" and click to "extract all".</li>
+                <li>Now you have 2 same file. But 1st is zip and 2nd is unzip. like this image</li>
+                <img src="./assets/gf11.png" alt="">
+                <li>Go to unzip folder. You can see this:</li>
+                <img src="./assets/gf12.png" alt="">
+                <li>This file is our main font that highlighted</li>
+                <img src="./assets/gf13.png" alt="">
+                <li>Rename this file to "main". And you can see this:</li>
+                <img src="./assets/gf14.png" alt="">
+                <li>Copy this "main" named file and paste to this folder: theme/assets/fonts/</li>
+                <li>Font changed to your own.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="favicon">
+            <h1>Change favicon</h1>
+            <img src="./assets/changeFav.png" alt="">
+            <ol><li>Replace theme/assets/images/favicon.png to your favicon image</li></ol>
+            <p class="d">Make sure to image size to 48x48 px.</p>
+        </section>
+
+
+
+        <section id="title">
+            <h1>Change title</h1>
+            <img src="./assets/changeTitle.png" alt="">
+            <ol>
+                <li>In <a href="#introducing">Installation</a> page you known how to Open file, edit, save and show preview in browswer.</li>
+                <li>Open theme/index.html file in Notepad. you will see like this:</li>
+                <img src="./assets/changeTitleCode.png" alt="">
+                <li>Change title in yourself. Save file. To see preview, reload page in browser.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="description">
+            <h1>Change Description</h1>
+            <p>Description it not visible to users. But it plays an important role to rank on scearch engine like: google, bing etc.</p>
+            <p>To set description in your own, open theme/index.html file with Notepad. You can see like this:</p>
+            <img src="./assets/changeDes.png" alt="">
+            <ol>
+                <li>Change this into your own. there is no limits of using word or sentence to description. But 3-4 sentence is a good thing.</li>
+                <li>Click to "save file".</li>
+            </ol>
+        </section>
+
+
+
+        <section id="tags">
+            <h1>Change Tags</h1>
+            <p>Tag it not visible to users. But it plays an important role to rank on scearch engine like: google, bing etc.</p>
+            <ol>
+                <li>To set tag in your own, open theme/index.html file with Notepad. You can see like this:</li>
+                <img src="./assets/changeTags.png" alt="">
+                <li>Change this into your own. there is no limits of using word or sentence. But 6-7 tags is a good thing.</li>
+                <p class="d">Make sure to add comma. after each tag. Last tag should not use comma. Like this:</p>
+                <br>
+<pre><code>personal portfolio, freelancer portfolio, creative portfolio, video editor portfolio, ovik portfolio, desiner portfolio</code></pre>
+<li>Click to "save file".</li>
+            </ol>
+        </section>
+
+
+
+        <section id="author">
+            <h1>Change author</h1>
+            <p>Author it not visible to users. But it plays an important role to rank on scearch engine like: google, bing etc.</p>
+            <ol>
+                <li>To set author in your own, open theme/index.html file with Notepad. You can see like this:</li>
+                <img src="./assets/changeAuthor.png" alt="">
+                <li>Click to "save file".</li>
+            </ol>
+        </section>
+
+
+
+        <section id="logo">
+            <h1>Change Logo</h1>
+            <p>In this portfolio site, you can set 2 logo. 1 is for dark mode and 2nd is light mode.</p>
+            <h2>Logo in light mode</h2>
+            <img src="./assets/changeLogoLight.png" alt="">
+            <h2>Logo in dark mode</h2>
+            <img src="./assets/changeLogoDark.png" alt="">
+            <h2>Change logo in light mode</h2>
+            <ol>
+                <li>Replace theme/assets/images/logo-light.png to your own logo.</li>
+                <p class="d">Make sure to use logo's height to 40px and width to as like as you want.</p>
+                <li>reload page on browser. You can see your logo now.</li>
+            </ol>
+            <br /><br />
+            <h3>Change logo in dark mode</h3>
+            <ol>
+                <li>Replace theme/assets/images/logo-dark.png to your own logo.</li>
+                <p class="d">Make sure to use logo's height to 40px and width to as like as you want.</p>
+                <li>reload page on browser. You can see your logo now.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="hero-image">
+            <h1>Change Hero section image</h1>
+            <img src="./assets/changeHeroImage.png" alt="">
+            <ol>
+                <li>Replace theme/assets/images/hero.png to your own image</li>
+                <p class="d">Make sure to image's height: 900px and width: 1200px</p>
+                <li>reload page on browser. You can see your image now.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="name">
+            <h1>Change name</h1>
+            <img src="./assets/changeName.png" alt="">
+            <ol>
+                <li>Open theme/index.html file in Notepad. Go line number:101. You can see like this:</li>
+                <img src="./assets/changeNameCode.png" alt="">
+                <li>You can change name here easily by Replaceing "Avik"</li>
+                <li>save file and refresh the website of browser. You can see your name.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="typewriter-effect">
+            <h1>Change typewriter effect</h1>
+            <img src="./assets/changeTypeWriter.png" alt="">
+            <ol>
+                <li>Open theme/assets/js/script.js with Notepad. Go to the line number:204 .You can see like this:</li>
+                <img src="./assets/changeTitleCode.png" alt="">
+                <li>Open theme/assets/js/script.js with Notepad. Go to the line number:204 .You can see like this:</li>
+                <img src="./assets/changeSkillCode.png" alt="">
+                <li>Make sure to use single quote. Use comma after every name. not use comma at last name. Like this:</li>
+<pre><code>'Youtuber', 'Freelancer', 'Writer', 'Treader', 'Doctor', 'Artist', 'Blogger'</code></pre>
+                <li>save file and refresh the website of browser. You can see your skill with typewriter animation.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="bio">
+            <h1>Change Bio</h1>
+            <img src="./assets/changeBio.png" alt="">
+            <ol>
+                <li>Open theme/index.html file with notepad. Go to the number line: 103. You can see like this:</li>
+                <img src="./assets/bioCode.png" alt="">
+                <li>Change this bio to yourself.</li>
+                <li>save file and refresh the website of browser. You can see your bio.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="cv">
+            <h1>Change CV</h1>
+            <p class="d">Download CV is not work. It is not any problem of code. This problem will solve when you deploy. Like: yourdomain.com</p>
+            <img src="./assets/cv.png" alt="">
+            <ol>
+                <li>Replace theme/assets/files/cv.pdf to your own file.</li>
+                <li>save file and refresh the website of browser. You can see your CV.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="social">
+            <h1>Change Social media icon and link</h1>
+            <img src="./assets/social.png" alt="">
+            <h2>Change first social media icon and link</h2>
+            <ol>
+                <li>Open theme/assets/js/script.js with Notepad. Go to the line number:2 .You can see like this:</li>
+                <img src="./assets/socialCode.png" alt="">
+                <li>Replace name: "linkedin" to any social media name. It will detect icon.</li>
+                <p class="d">Make sure to use capital letter and no space between letters. like: "youtube", "facebook", "telegram" etc.</p>
+                <li>Replace link: "https://linkedin.com" to any link. like: "https://linkedin.com/your-profile"</li>
+                <p class="d">Make sure to use "https://" before each link.</p>
+                <li>save file and refresh the website of browser. You can see first social media now.</li>
+            <h2>Add more icons and links like this code:</h2>
+<pre><code>const social = [
+  { name: 'linkedin', link: 'https://linkedin.com' },
+  { name: 'instagram', link: 'https://instagram.com' },
+  { name: 'github', link: 'https://github.com' },
+  { name: 'twitter', link: 'https://twitter.com' },
+  { name: 'facebook', link: 'https://facebook.com' }
+];</code></pre>
+                <p class="d">Make sure to use comma after each social media block. And not use comma at last block.</p>
+                <li>save file and refresh the website of browser. You can see all social media now.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="milestone">
+            <h1>Change milestone section</h1>
+            <img src="./assets/milestone.png" alt="">
+            <h2>Change Big card</h2>
+            <ol>
+                <p>This portfolio has only a big card like this image. Now you will change this card.</p>
+                <img src="./assets/bigCard.png" alt="">
+                <li>open theme/assets/js/script.js file in Notepad and go to the line number: 636. You can see like this code</li>
+                <img src="./assets/bigCardNumCode.png" alt="">
+                <li>You can change this number-25 to any number as you want.</li>
+                <li>save file and refresh the website of browser. You can see big card's number has changed.</li>
+                <li>Open theme/index.html file with Notepad and go 126 th line. You can change this code that i highlighted in this image:</li>
+                <img src="./assets/bigCardAll.png" alt="">
+                <li>save file and refresh the website of browser. You can see big card's title and details changed.</li>
+            </ol>
+            <h2>Change first small card</h2>
+            <img src="./assets/smallCard.png" alt="">
+            <ol>
+                <li>open theme/assets/js/script.js file in Notepad and go to the line number: 7. You can see like this code:</li>
+                <img src="./assets/smallCardCode.png" alt="">
+                <li>You can change this number and label here of 1st small card.</li>
+                <li>save file and refresh the website of browser. You can see first small card's number and label changed.</li>
+                <h2>Add more small card</h2>
+<pre><code>const stats = [ 
+  { number: "20000+", label: "Our Project Complete" },
+  { number: "20+", label: "Our Natural Products" },
+  { number: "80+", label: "Clients Reviews" },
+  { number: "700+", label: "Our Satisfied Clients" },
+  { number: "5000+", label: "Happy Customers" },
+  { number: "15+", label: "Award Winning Team" },
+  { number: "300+", label: "Partners Worldwide" },
+  { number: "120+", label: "Offices Around The World" }
+];</code></pre>
+                <p class="d">Make sure to use comma after each small card block. And not use comma at last block.</p>
+                <li>save file and refresh the website of browser. You can see all small card now.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="skill">
+            <h1>Change Skill section</h1>
+            <h2>Change first skill</h2>
+            <ol>
+                <img src="./assets/skill.png" alt="">
+                <li>open theme/assets/js/script.js file in Notepad and go to the line number: 11. You can see like this code:</li>
+                <img src="./assets/skillCode.png" alt="">
+                <li>You can change this skill name and skill percentage.</li>
+                <li>save file and refresh the website of browser. You can see your first skill name and percentage has changed.</li>
+            </ol>
+            <h2>Add more skill</h2>
+<pre><code>const skill = [
+  { name: 'HTML', percent: 90 },
+  { name: 'CSS', percent: 95 },
+  { name: 'JavaScript', percent: 60 },
+  { name: 'React', percent: 45 },
+  { name: 'Node.js', percent: 40 },
+  { name: 'Python', percent: 20 },
+  { name: 'PHP', percent: 30 },
+  { name: 'Java', percent: 25 },
+  { name: 'C++', percent: 15 },
+  { name: 'SQL', percent: 50 }
+];</code></pre>
+            <p class="d">Make sure to use comma after each skill block. And not use comma at last block.</p>
+            <ol>
+                <li>save file and refresh the website of browser. You can see all skill now.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="education">
+            <h1>Change education status</h1>
+            <img src="./assets/edu.png" alt="">
+            <h2>Change 1st education</h2>
+            <ol>
+                <li>open theme/assets/js/script.js file in Notepad and go to the line number: 14. You can see like this code:</li>
+                <img src="./assets/eduCode.png" alt="">
+                <li>You can change this education card's degree, institution, year and Description.</li>
+                <li>save file and refresh the website of browser. You can see your first education card has changed.</li>
+                <h2>Add more education</h2>
+
+
+            </ol>
+<pre><code>const education = [
+    { degree: "B.Sc in Computer Science", institution: "Dhaka University", year: "2018 – 2022", description: "Studied various aspects of computer science including algorithms, data structures, and software engineering." },
+    { degree: "M.Sc in Software Engineering", institution: "Dhaka University", year: "2022 – 2024", description: "Focused on advanced software development methodologies and project management." },
+    { degree: "Web Development Bootcamp", institution: "Online Course", year: "2023", description: "Completed a comprehensive bootcamp covering HTML, CSS, JavaScript, and modern web frameworks." }
+    ];</code></pre>
+                <p class="d">Make sure to use comma after each education card block. And not use comma at last block.</p>
+                <ol><li>save file and refresh the website of browser. You can see all education card now.</li></ol>
+        </section>
+
+
+
+        <section id="exprience">
+            <h1>Change Exprience section</h1>
+            <img src="./assets/ex.png" alt="">
+            <ol>
+                <h2>Change first Exprience card</h2>
+                <li>open theme/assets/js/script.js file in Notepad and go to the line number: 19. You can see like this code:</li>
+                <img src="./assets/exc.png" alt="">
+                <li>You can change this Exprience card's position, company, year and description.</li>
+                <li>save file and refresh the website of browser. You can see your first Exprience card's position, company, year and description.</li>
+            </ol>
+            <h2>Add more exprience card</h2>
+<pre><code>const experience = [
+  { position: "Frontend Developer", company: "Tech Solutions Ltd.", year: "2020 – 2022", description: "Developed responsive web applications using HTML, CSS, and JavaScript. Collaborated with designers to implement user-friendly interfaces." },
+  { position: "Full Stack Developer", company: "Innovatech Inc.", year: "2022 – Present", description: "Worked on both frontend and backend development using React, Node.js, and MongoDB. Led a team of developers to deliver high-quality software solutions." },
+  { position: "Freelance Web Developer", company: "Self-employed", year: "2018 – Present", description: "Provided web development services to various clients, focusing on custom website design and development." }
+];</code></pre>
+            <p class="d">Make sure to use comma after each Exprience block. And not use comma at last block.</p>
+            <ol><li>save file and refresh the website of browser. You can see all Exprience card now.</li></ol>
+        </section>
+
+
+
+        <section id="portfolio">
+            <h1>Change portfolio</h1>
+            <img src="./assets/p.png" alt="">
+            <h2>Change first portfolio card</h2>
+            <ol>
+                <li>open theme/assets/js/script.js file in Notepad and go to the line number: 24. You can see like this code:</li>
+                <img src="./assets/pc.png" alt="">
+                <li>You can change this portfolio card's title, type, imageLink, Description, youtube video link and portfolio info.</li>
+            </ol>
+            <h2>Let's describe about image link:</h2>
+            <ol>
+                <li>Delete theme/assets/images/food-delivery-app.png it was default image for first portfolio's image.</li>
+                <li>Paste your first portfolio's image to theme/assets/images folder. like your first portfolio's image is "my-first-image-for-portfolio.png" so your image link is: "./assets/images/my-first-image-for-portfolio.png"</li>
+                <p className="d">Make sure to your first portfolio image's size is 600x450 px.</p>
+                <li>set your image link: "./assets/images/my-first-image-for-portfolio.png" to theme/assets/js/script.js file</li>
+            </ol>
+            <ol>
+                <h2>Let's describe about description</h2>
+                <ol>
+                    <li>In description, you can use bold text like:</li>
+<pre><code id="portfolio-1"></code></pre>
+<li>You can use italic like:</li>
+<pre><code id="portfolio-2"></code></pre>
+<li>You can use bold and italic like:</li>
+<pre><code id="portfolio-3"></code></pre>
+<li>You can use line break like:</li>
+<pre><code id="portfolio-4"></code></pre>
+                </ol>
+            </ol>
+            <ol>
+                <h3>Let's describe about youtube link</h3>
+                <li>Go youtube and open your portfolio's video. Like this image i opened a video in youtube:</li>
+                <img src="./assets/yt.png" alt="" />
+                <li>Click "share" button like this image:</li>
+                <img src="./assets/ytShare.png" alt="" />
+                <li>Click to "enbed" like this image</li>
+                <img src="./assets/yte.png" alt="" />
+                <li>Copy this selected link like this image</li>
+                <img src="./assets/ytc.png" alt="" />
+                <li>This link is your project's video link</li>
+            </ol>
+            <ol>
+                <h3>Let's describe about project info:</h3>
+                <img src="./assets/pi.png" alt="" />
+                <li>This code can visible to when click to portfolio card. you can see this code's result:</li>
+                <img src="./assets/pic.png" alt="" />
+                <p className="d">Not give space to this highlighted code:</p>
+                <img src="./assets/pic2.png" alt="" />
+                <li>If you want to set space, give capital letter of first word's letter. Like: if you want to give "Project type", set code to "projectType"</li>
+                <li>You can set more details in portfolio info. like this code:</li>
+            </ol>
+<pre><code>projectInfo: {
+  projectType: "App Development",
+  client: "Ovik Biswas",
+  date: "12 February, 2024",
+  cost: "$7,200",
+  time: "7 Days",
+  technology: "Figma and VS Code",
+  platform: "Android & iOS",
+  features: "Login, Payment Gateway, Push Notification",
+  teamSize: "3 Members",
+  projectManager: "Amio Biswas",
+  toolsUsed: "Figma, VS Code, Firebase, GitHub",
+  deliverables: "Prototype, Source Code, APK, Documentation",
+  communication: "Weekly Zoom Meetings",
+  maintenance: "1 Month Free Support",
+  rating: "★★★★★"
+}</code></pre>
+            <li>save file and refresh the website of browser. You can see first portfolio now.</li>
+            <h2>Add more portfolio</h2>
+<pre><code>projectInfo: {
+  projectType: "App Development",
+  client: "Ovik Biswas",
+  date: "12 February, 2024",
+  cost: "$7,200",
+  time: "7 Days",
+  technology: "Figma and VS Code",
+  platform: "Android & iOS",
+  features: "Login, Payment Gateway, Push Notification",
+  teamSize: "3 Members",
+  projectManager: "Amio Biswas",
+  toolsUsed: "Figma, VS Code, Firebase, GitHub",
+  deliverables: "Prototype, Source Code, APK, Documentation",
+  communication: "Weekly Zoom Meetings",
+  maintenance: "1 Month Free Support",
+  rating: "★★★★★"
+}
+save file and refresh the website of browser. You can see first portfolio now.
+Add more portfolio
+const portfolio = [
+  {
+    title: "Food delivery development",
+    type: "App Development",
+    imageLink: "./assets/images/food-delivery-app.png",
+    description: "<strong>Introducing my Food Delivery Mobile App project!</strong><br><br><i>Designed to simplify the way people order food with a smooth, responsive, and intuitive interface.</i><br><br>This app includes real-time tracking, smart restaurant discovery, and seamless ordering — all in one place.<br><br><strong>Key Features:</strong><br><br>1. <i>Easy login, profile management, and secure authentication.</i><br>2. <i>Explore restaurants by category, rating, and distance filters.</i><br>3. <i>Quickly add items to cart, customize orders, and apply discount codes.</i><br>4. <i>Track your delivery on a live map with accurate ETA.</i><br>5. <i>Built with clean UI, responsive design, and performance-first architecture.</i><br><br><br><strong>This app bridges convenience and efficiency, using real-world technology to enhance daily life.</strong><br><br><i>Check out the source code and live preview to explore the full experience.</i>",
+    videoLink: "https://www.youtube.com/embed/2qIH17dc7M8?si=xdYeeIKCCR8tI_YY",
+    projectInfo: {
+      projectType: "App Development",
+      client: "Ovik Biswas",
+      date: "12 February, 2024",
+      cost: "$7,200",
+      technology: "Figma and VS Code"
+    }
+  },
+  {
+    title: "Real-Time Chat Application",
+    type: "App Development",
+    imageLink: "./assets/images/chat-app.png",
+    description: "<strong>Presenting my Real-Time Chat Application project!</strong><br><br><i>Built to offer instant communication between users with a clean, minimal UI and seamless messaging experience.</i><br><br>This app supports real-time conversations, online presence tracking, and multimedia sharing — all optimized for mobile and desktop.<br><br><strong>Key Features:</strong><br><br>1. <i>Instant login, user registration, and secure Firebase authentication.</i><br>2. <i>Real-time 1-to-1 and group messaging powered by WebSockets or Firebase Realtime DB.</i><br>3. <i>Send and receive images, emojis, and file attachments smoothly.</i><br>4. <i>Live typing indicators, message status (sent, delivered, seen), and online/offline detection.</i><br>5. <i>Responsive design with optimized performance for both Android and web platforms.</i><br><br><br><strong>This app showcases how modern communication tools can be fast, reliable, and beautifully designed.</strong><br><br><i>Explore the live demo and dive into the code to see it in action!</i>",
+    videoLink: "https://www.youtube.com/embed/2VGnV4TZh5g?si=QzFzMJdojXk1s_Qb",
+    projectInfo: {
+    projectType: "App Development",
+    client: "Ovik Biswas",
+    date: "26 March, 2024",
+    cost: "$6,800",
+    duration: "10 Days",
+    technology: "React Native, Firebase, and VS Code",
+    platforms: "Android, iOS, and Web",
+    teamSize: "Solo Project",
+    role: "UI/UX Design, Frontend & Backend Development",
+    repository: "https://github.com/ovikbiswas/chat-app",
+    livePreview: "https://chat-app-demo.vercel.app"
+    }
+  },
+  {
+    title: "Smart Medical Appointment App",
+    type: "App Development",
+    imageLink: "./assets/images/medical-app.png",
+    description: "<strong>Introducing my Smart Medical Appointment App!</strong><br><br><i>Designed to simplify doctor appointments, health tracking, and patient-doctor interaction with a user-friendly mobile interface.</i><br><br>This app streamlines healthcare by enabling real-time booking, medical history access, and smart notifications — all in one place.<br><br><strong>Key Features:</strong><br><br>1. <i>User-friendly registration, secure login, and patient profile setup.</i><br>2. <i>Search and filter doctors by specialty, availability, and ratings.</i><br>3. <i>Instant appointment booking with calendar sync and reminders.</i><br>4. <i>Upload & access prescriptions, test reports, and medical history.</i><br>5. <i>Emergency contact, live chat with doctors, and health tips section.</i><br><br><br><strong>This app empowers users to take control of their health in a modern and accessible way.</strong><br><br><i>Don’t forget to explore the live preview and source code for a complete walkthrough!</i>",
+    videoLink: "https://www.youtube.com/embed/j5QgUcuQykk?si=T3vJGvnygkHU7Wx1",
+    projectInfo: {
+      projectType: "App Development",
+      client: "Ovik Biswas",
+      date: "4 May, 2024",
+      cost: "$8,500",
+      duration: "12 Days",
+      technology: "Flutter, Firebase, and VS Code",
+      platforms: "Android and iOS",
+      teamSize: "Solo Project",
+      role: "UI Design, Frontend Development, Firebase Integration",
+      repository: "https://github.com/ovikbiswas/medical-app",
+      livePreview: "https://medical-app-demo.vercel.app"
+    }
+  },
+  {
+    title: "Survival Zombie Shooter Game",
+    type: "Game Development",
+    imageLink: "./assets/images/zombie-game.png",
+    description: "<strong>Enter the apocalyptic world of Survival Zombie Shooter!</strong><br><br><i>A fast-paced 2D shooter game where players fight endless waves of zombies using strategy, speed, and skill.</i><br><br>Built for intense gameplay with rich animations, sound effects, and level progression.<br><br><strong>Key Features:</strong><br><br>1. <i>Multiple zombie types with unique attack behaviors.</i><br>2. <i>Weapon upgrades, ammo pickups, and health kits.</i><br>3. <i>Day/night system and map-based level progression.</i><br>4. <i>Scoreboard and survival time tracking.</i><br>5. <i>Optimized for both desktop and mobile gameplay with controller support.</i><br><br><strong>Can you survive the horde?</strong><br><br><i>Play the live demo and explore the source code for full details.</i>",
+    videoLink: "https://www.youtube.com/embed/3mMYK7T5L1c?si=UGXWfVx4bKZo9yF2",
+    projectInfo: {
+      projectType: "Game Development",
+      client: "Personal Game Project",
+      date: "10 April, 2024",
+      cost: "Free Project",
+      duration: "8 Days",
+      technology: "Godot Engine, GDScript, Photoshop",
+      platforms: "Web, Windows",
+      teamSize: "Solo",
+      role: "Game Design, Logic Scripting, Animation Integration",
+      repository: "https://github.com/ovikbiswas/zombie-shooter",
+      livePreview: "https://zombie-game-demo.vercel.app"
+    }
+  },
+  {
+    title: "Pixel Platformer Adventure",
+    type: "Game Development",
+    imageLink: "./assets/images/platformer-game.png",
+    description: "<strong>Welcome to Pixel Platformer Adventure!</strong><br><br><i>A charming 2D side-scrolling game featuring classic jumping, running, and obstacle dodging in pixel-perfect style.</i><br><br>This game mixes retro visuals with modern smooth controls for a satisfying experience.<br><br><strong>Key Features:</strong><br><br>1. <i>Multiple levels with increasing difficulty and hidden rewards.</i><br>2. <i>Pixel art characters, background parallax, and smooth animations.</i><br>3. <i>Enemies with patrol AI and health mechanics.</i><br>4. <i>Checkpoints, coin collection, and level completion score.</i><br>5. <i>Responsive on keyboard and mobile touch support.</i><br><br><strong>Perfect blend of nostalgia and fun!</strong><br><br><i>Try the live demo and browse the full source on GitHub.</i>",
+    videoLink: "https://www.youtube.com/embed/jGgFGXbwAfY?si=5aVQEj9IbEOfF8LI",
+    projectInfo: {
+      projectType: "Game Development",
+      client: "Ovik Biswas",
+      date: "18 May, 2024",
+      cost: "$1,000",
+      duration: "6 Days",
+      technology: "Godot, Aseprite, GDScript",
+      platforms: "Web, Android",
+      teamSize: "Solo",
+      role: "Game Art, Physics Programming, Level Design",
+      repository: "https://github.com/ovikbiswas/platformer-game",
+      livePreview: "https://platformer-demo.vercel.app"
+    }
+  },
+  {
+    title: "Street Duel – 2D Fighting Game",
+    type: "Game Development",
+    imageLink: "./assets/images/fight-game.png",
+    description: "<strong>Introducing Street Duel – the ultimate 2D pixel-based fighting game!</strong><br><br><i>Inspired by classic arcade fighting games, this project features combo attacks, character selection, and dramatic fight animations.</i><br><br>Built with polished sprites and real-time input combat mechanics.<br><br><strong>Key Features:</strong><br><br>1. <i>2-player local battle mode with keyboard controls.</i><br>2. <i>Multiple fighters with unique abilities and special moves.</i><br>3. <i>Health bars, power charge meters, and win indicators.</i><br>4. <i>Dynamic background environments and soundtrack.</i><br>5. <i>Combo input system, knockout finish, and fluid animation timing.</i><br><br><strong>Show your skills in the arena!</strong><br><br><i>Play the demo and dive into the clean, modular game code.</i>",
+    videoLink: "https://www.youtube.com/embed/6JhXb6bBpo4?si=xcMkZtvAKyAm6JP6",
+    projectInfo: {
+      projectType: "Game Development",
+      client: "Self Project",
+      date: "2 June, 2024",
+      cost: "Free/Open Source",
+      duration: "9 Days",
+      technology: "Godot, GDScript, Piskel",
+      platforms: "Web, Desktop",
+      teamSize: "Solo",
+      role: "Combat System, Character Design, Game Logic",
+      repository: "https://github.com/ovikbiswas/fight-game",
+      livePreview: "https://fight-game-demo.vercel.app"
+    }
+  }
+];</code></pre>
+            <p class="d">Make sure to use comma after each portfolio block. And not use comma at last block.</p>
+            <ol><li>save file and refresh the website of browser. You can see all portfolio has changed.</li></ol>
+        </section>
+
+
+
+        <section id="contact">
+            <h1>Change Contact section</h1>
+            <h2>Add your email for contact form</h2>
+            <p>When any user give there name, email, subject, message and submit, it will go your email. So, lets set up your email for working contact form.</p>
+            <ol>
+                <li>open theme/index.html file in Notepad and go to the line number: 174. You can see like this code:</li>
+                <img src="./assets/fc.png" alt="" />
+                <li>Change "your@email.com" to your email. You can use here any email services like: gmail, outlock, yahoo, hotmail etc.</li>
+                <li>save file and refresh the website of browser. Now, if someone submit their data, it will go to your email</li>
+            </ol>
+            <p className="d">Make sure to if users submited form does not go to your email, check spam email</p>
+             <h3>Change google map</h3>
+            <img src="./assets/map.png" alt="" />
+            <ol>
+                <li>open <a target="_blank" href="https://maps.google.com">google map</a> in your browser and desired location. Example i go to "Eiffel Tower". like this image:</li>
+                <img src="./assets/map1.png" alt="" />
+                <li>You can set satelite view or default view. Like this two image:</li>
+                <img src="./assets/map1.png" alt="" />
+                <br />
+                <img src="./assets/map2.png" alt="" />
+                <li>You can change thsis type by clicking this "Layers" button like this image:</li>
+                <img src="./assets/map3.png" alt="" />
+                <li>Click to "Share" button</li>
+                <img src="./assets/map4.png" alt="" />
+                <li>Click to "Embed map"</li>
+                <img src="./assets/map5.png" alt="" />
+                <li>Click to "Copy Html"</li>
+                <img src="./assets/map6.png" alt="" />
+                <li>You Have codied Some code.</li>
+                <li>Go to any node app. Example i go to <a target="_blank" href="https://blank.page">Blank page</a>. It is just a notepad. You can open any notepad.</li>
+                <li>Paste your code in notepad. Like this image:</li>
+                <img src="./assets/map7.png" alt="" />
+                <li>Copy this selected link. Like this image:</li>
+                <img src="./assets/map8.png" alt="" />
+                <li>Open theme/index.html file with notepad. Go to line number: 188. You can see like this image:</li>
+                <img src="./assets/map9.png" alt="" />
+                <li>replace "your-google-map-link" to your copied link</li>
+                <li>save file and refresh the website of browser. Now, you can see your desired located area in google map embed.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="client">
+            <h1>Change clients review</h1>
+            <img src="./assets/c.png" alt="" />
+            <p className="d">You should set atleast 9 clients review card. Otherwise it cann't be work properly.</p>
+            <h3>Let's change mendetory first 9 clients reviwe cards.</h3>
+            <ol>
+                <li>Open theme/script.js and go 40th line. You can see like this image:</li>
+                <img src="./assets/cc.png" alt="" />
+                <li>You can change this 9 card's clients'name, client's company name, review and rating easily.</li>
+                <h2>Let's describe about "imageLink":</h2>
+                <li>Delete theme/assets/images/client-1.png it was default image for each client image.</li>
+                <li>Paste your clients image to theme/assets/images folder. like your first client's image is "client-1.png" so your image link is: "./assets/images/client-1.png"</li>
+                <p className="d">Make sure to each client image size is 100x100 px</p>
+                <li>save file and refresh the website of browser. Now, you can see your 9 client's review card has changed.</li>
+            </ol>
+            <h2>Add more client's review card</h2>
+<pre><code>const clientReviews = [
+    {name:"Isabella Rossi", company:"Rossi Ventures", imageLink:"./assets/images/client-1.png", rating:5, review:"Absolutely professional from start to finish. He took our rough wireframes and transformed them into a fully polished, stunning website. Communication was clear and consistent throughout. I’d highly recommend him to anyone in need of top-quality web development."},
+    {name:"Liam Carter", company:"TechNova Ltd.", imageLink:"./assets/images/client-2.png", rating:4, review:"Working with him was a smooth and pleasant experience. He always delivered work on time and offered practical suggestions that made the final product even better. His attention to detail and professionalism really stood out."},
+    {name:"Ayesha Rahman", company:"Rahman Interiors", imageLink:"./assets/images/client-3.png", rating:5, review:"Our company website now looks sleek, modern, and highly functional thanks to his excellent design sense. He was responsive and easy to work with during the whole process. The outcome exceeded our expectations."},
+    {name:"Carlos Mendez", company:"Mendez Solutions", imageLink:"./assets/images/client-4.png", rating:3, review:"Good work overall with a strong understanding of the project. There were a few delays in communication, but the end result was satisfying. He eventually delivered a solid and functional website."},
+    {name:"Sophie Tan", company:"Tan Tech", imageLink:"./assets/images/client-5.png", rating:5, review:"He really knows his stuff and brings great ideas to the table. The attention to detail and care he gave to our project was impressive. We’re very happy with the outcome and his support throughout."},
+    {name:"Noah Smith", company:"Smith & Co. Marketing", imageLink:"./assets/images/client-6.png", rating:4, review:"A solid and skilled developer who helped us optimize our landing page performance significantly. He worked efficiently and met the deadlines. I would definitely consider working with him again."},
+    {name:"Mila Khatun", company:"Mila Fashion House", imageLink:"./assets/images/client-7.png", rating:5, review:"Outstanding work with a creative touch and fast turnaround time. The site is exactly what we needed — mobile-friendly, elegant, and easy to navigate. I’ll gladly work with him again."},
+    {name:"Daniel Lee", company:"Lee Architecture", imageLink:"./assets/images/client-8.png", rating:4, review:"Very responsive and professional throughout the entire process. He took all of our feedback seriously and incorporated it well. The final design fit our brand identity perfectly."},
+    {name:"Fatima Noor", company:"Noor Consulting", imageLink:"./assets/images/client-9.png", rating:5, review:"It was an amazing experience from start to finish. He was patient, flexible, and went above and beyond to deliver a website that exceeded our expectations. Highly recommended for any business."},
+    {name:"Oliver Chen", company:"Chen Digital", imageLink:"./assets/images/client-10.png", rating:5, review:"Brilliant execution and great design instincts. He brought fresh ideas and delivered a user-friendly interface that our users love."},
+    {name:"Sara Ahmed", company:"Ahmed Studios", imageLink:"./assets/images/client-11.png", rating:4, review:"Great collaboration and on-time delivery. He was open to feedback and revised the design until it met our vision."},
+    {name:"Jasper Novak", company:"Novak Robotics", imageLink:"./assets/images/client-12.png", rating:5, review:"He understood our technical needs and created a site that performs seamlessly across devices. Highly efficient and professional."},
+    {name:"Emily Park", company:"Park Law Associates", imageLink:"./assets/images/client-13.png", rating:3, review:"Decent job overall. Some parts needed revisions but he handled them promptly. The final site works well for our firm."},
+    {name:"Arjun Mehta", company:"Mehta Innovations", imageLink:"./assets/images/client-14.png", rating:5, review:"Exceptional service and flawless execution. He created a modern, fast, and reliable site that elevated our brand."},
+    {name:"Zara Iqbal", company:"Iqbal Events", imageLink:"./assets/images/client-15.png", rating:4, review:"Loved his creative input and timely delivery. The website reflects our event brand perfectly. Would hire again."}
+];</code></pre>
+            <ol><li>save file and refresh the website of browser. Now, you can see all clients review card now.</li></ol>
+        </section>
+
+
+
+        <section id="plan">
+            <h1>Change Plan section</h1>
+        <img src="./assets/plan1.png" alt="" />
+        <h3>Change first Plan</h3>
+        <img src="./assets/plan1.png" alt="" />
+            <ol>
+                <li>open theme/assets/js/script.js and go 61th line. You can see like this image:</li>
+                <img src="./assets/plan1c.png" alt="" />
+                <li>You can easily change to 1st plan's title, price and description.</li>
+                <h3>Let's talk about "badge: null"</h3>
+                <li>Your can set badge: "Most Popular" it will set "Most Popular" on top-right of 1st plan like 2nd plan</li>
+                <h3>Let's talk about "features"</h3>
+                <li>You can change 2 plan features replacing to "plan 1" and "plan 2"</li>
+                <li>You can set more plan featutes like this code:</li>
+            </ol>
+<pre><code>features: [
+      "5 Social Media Account",
+      "Free Platform Access",
+      "24/7 Customer Support",
+      "24/7 Customer Support",
+      "24/7 Customer Support",
+      "24/7 Customer Support",
+      "UI UX Design",
+      "Life time support"
+]</code></pre>
+            <li>You can set 2nd and 3rd plan ealisy.</li>
+            <h2>If you cann't make, here is full code of changing 1st, 2nd and 3rd plan card:</h2>
+<pre><code>const plans = [
+  {
+    title: "Basic",
+    price: "$1200",
+    badge: null,
+    priceUnit: "/Month",
+    description: "Description of the tier list will go here, copy should be concise and impactful.",
+    features: [
+      "5 Social Media Account",
+      "Free Platform Access",
+      "24/7 Customer Support",
+      "UI UX Design",
+      "Life time support"
+    ]
+  },
+  {
+    title: "Standard",
+    price: "$1900",
+    badge: "Most Popular",
+    priceUnit: "/Month",
+    description: "Description of the tier list will go here, copy should be concise and impactful.",
+    features: [
+      "5 Social Media Account",
+      "Free Platform Access",
+      "24/7 Customer Support",
+      "24/7 Customer Support",
+      "24/7 Customer Support",
+      "24/7 Customer Support",
+      "UI UX Design",
+      "Life time support"
+    ]
+  },
+  {
+    title: "Premium",
+    price: "$2700",
+    badge: null,
+    priceUnit: "/Month",
+    description: "Description of the tier list will go here, copy should be concise and impactful.",
+    features: [
+      "5 Social Media Account",
+      "Free Platform Access",
+      "24/7 Customer Support",
+      "UI UX Design",
+      "Life time support"
+    ]
+  }
+];</code></pre>
+            <ol><li>Save file and reload the browser. You can see all plan changed</li></ol>
+        </section>
+
+
+
+        <section id="faq">
+            <h1>Change FAQ section</h1>
+            <img src="./assets/faq.png" alt="">
+            <ol>
+                <h2>Chnage 1st FAQ's question and answer</h2>
+                <li>Open theme/assets/js/script.js file with notepad and go to 52th line. You can see like this image:</li>
+                <img src="./assets/faqc.png" alt="" />
+                <li>You can easily change 1st FAQ's question and answer</li>
+            </ol>
+            <h2>Add more FAQ. Follow this code:</h2>
+<pre><code>const faqData = [
+  { question: "Question 1", answer: "Answer 1" },
+  { question: "Question 2", answer: "Answer 2" },
+  { question: "Question 3", answer: "Answer 3" },
+  { question: "Question 4", answer: "Answer 4" },
+  { question: "Question 5", answer: "Answer 5" }
+];</code></pre>
+            <p class="d">Make sure to use comma after each faq block. And not use comma at last block.</p>
+        </section>
+
+
+
+        <section id="footer">
+            <h1>Change address, mobile number and email address</h1>
+            <img src="./assets/footer.png" alt="">
+            <uol>
+                <li>Open theme/index.html file with notepad and go to 245th line. You can see like this image:</li>
+                <img src="./assets/footerc.png" alt="">
+                <li>You can change this easily.</li>
+            </ol>
+
+            <h2>Change Copyright section</h2>
+            <img src="./assets/copyright.png" alt="">
+            <uol>
+                <li>Open theme/index.html file with notepad and go to 262th line. You can see like this image:</li>
+                <img src="./assets/copyrightc.png" alt="">
+                <li>You can easily change here.</li>
+            </ol>
+        </section>
+
+
+
+        <section id="credit">
+            <h1>Source & Credits</h1>
+            <ol>
+                <li>Google Fonts: <a target="_blank" href="https://fonts.google.com">https://fonts.google.com</a></li>
+                <li>Fontawsome: <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+                <li>Swiper JS: <a target="_blank" href="http://swiperjs.com/">http://swiperjs.com/</a></li>
+                <li>Odometer: <a target="_blank" href="https://github.hubspot.com/odometer/">https://github.hubspot.com/odometer/</a></li>
+                <li>Tailwind CSS: <a target="_blank" href="https://tailwindcss.com/">https://tailwindcss.com/</a></li>
+                <li>GSAP: <a target="_blank" href="https://gsap.com/">https://gsap.com/</a></li>
+                <li>Typed JS: <a target="_blank" href="https://github.com/mattboldt/typed.js/">https://github.com/mattboldt/typed.js/</a></li>
+                <li>Tilt JS: <a target="_blank" href="https://micku7zu.github.io/vanilla-tilt.js/">https://micku7zu.github.io/vanilla-tilt.js/</a></li>
+                <li>Form Submit co: <a target="_blank" href="https://formsubmit.co/">https://formsubmit.co/</a></li>
+            </ol>
+        </section>
+
+
+
+        <section id="support">
+            <h1>Get Live Support</h1>
+            <ol>
+                <li>Themeforest: <a href="https://themeforest.net/user/code-ovik">https://themeforest.net/user/code-ovik</a></li>
+                <li>Email: <a href="mailto:codeovik@gmail.com">codeovik@gmail.com</a></li>
+                <li>Alternative email: <a href="mailto:ovikbiswas01@gmail.com">ovikbiswas01@gmail.com</a></li>
+                <li>Youtube: <a target="_blank" href="https://youtube.com/@codeovik">https://youtu.be/@codeovik</a></li>
+            </ol>
+        </section>
+
+
+
+        <section id="updates">
+            <h2>Change Logs</h2>
+            <table>
+                <tr>
+                <th>Version Name</th>
+                <th>Release date</th>
+                <th>Updates</th>
+                </tr>
+                <tr>
+                <td>1.0</td>
+                <td>1 August, 2025</td>
+                <td>Initial Release</td>
+                </tr>
+                <!-- <tr>
+                <td>ডাটা ৪</td>
+                <td>ডাটা ৫</td>
+                <td>ডাটা ৬</td>
+                </tr>
+                <tr>
+                <td>ডাটা ৭</td>
+                <td>ডাটা ৮</td>
+                <td>ডাটা ৯</td>
+                </tr> -->
+            </table>
+        </section>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
